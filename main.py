@@ -37,8 +37,10 @@ def paginate(current_page: int,
 
     add_pages(max(total_pages - boundaries + 1, after_current_page + 1), total_pages)
     pages_list = [str(el) for el in pages_list]
-    return " ".join(pages_list)
+    pages_list = " ".join(pages_list)
+    print(pages_list)
+    return pages_list
 
 
 if __name__ == "__main__":
-    print(paginate(3, 100, 1, 0))
+    paginate(3, 10, 2, 2)
